@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Gardens - Comprehensive Cricket Scenario | India vs Pakistan T20I</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .header .match-info {
+            color: #00d4ff;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .weather-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(100, 149, 237, 0.3);
+            border-radius: 20px;
+            color: #87ceeb;
+        }
+
+        /* Tabs */
+        .tabs-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-button {
+            padding: 12px 30px;
+            background: rgba(100, 149, 237, 0.2);
+            border: 2px solid rgba(100, 149, 237, 0.5);
+            color: #87ceeb;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover {
+            background: rgba(100, 149, 237, 0.4);
+            border-color: #00d4ff;
+            color: #00d4ff;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            border-color: #ffd700;
+            color: #000;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Ground Section */
+        .ground-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ground-visual {
+            position: relative;
+            width: 700px;
+            height: 600px;
+            max-width: 100%;
+        }
+
+        /* Rain effect overlay */
+        .rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .rain-drop {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, transparent, rgba(174, 194, 224, 0.6));
+            animation: rain-fall linear infinite;
+        }
+
+        @keyframes rain-fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(700px);
+                opacity: 0;
+            }
+        }
+
+        /* Ground (oval) */
+        .ground {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center,
+                #2d5016 0%,
+                #3d6b1f 30%,
+                #2a4a12 60%,
+                #1f3a0d 100%);
+            box-shadow:
+                0 0 60px rgba(0,0,0,0.5),
+                inset 0 0 100px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* Wet patches on outfield */
+        .wet-patch {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(20, 60, 20, 0.7);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .wet-patch-1 {
+            width: 80px;
+            height: 60px;
+            top: 15%;
+            left: 20%;
+        }
+
+        .wet-patch-2 {
+            width: 100px;
+            height: 70px;
+            top: 60%;
+            right: 15%;
+        }
+
+        .wet-patch-3 {
+            width: 70px;
+            height: 50px;
+            bottom: 20%;
+            left: 25%;
+        }
+
+        .wet-patch-4 {
+            width: 60px;
+            height: 45px;
+            top: 30%;
+            right: 25%;
+        }
+
+        /* Water shimmer effect */
+        .water-shimmer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                transparent 40%,
+                rgba(255,255,255,0.05) 50%,
+                transparent 60%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        /* Boundary rope */
+        .boundary {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 560px;
+            height: 460px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        /* Inner circles */
+        .inner-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 2px dashed rgba(255,255,255,0.4);
+        }
+
+        .thirty-yard {
+            width: 280px;
+            height: 230px;
+        }
+
+        /* Pitch */
+        .pitch-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 180px;
+        }
+
+        .pitch {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                #c4a35a 0%,
+                #d4b56a 25%,
+                #c4a35a 50%,
+                #d4b56a 75%,
+                #c4a35a 100%);
+            border: 2px solid #8b7355;
+            position: relative;
+        }
+
+        /* Pitch cover (wet protection) */
+        .pitch-cover {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(100, 149, 237, 0.3),
+                rgba(100, 149, 237, 0.3) 10px,
+                rgba(70, 130, 180, 0.3) 10px,
+                rgba(70, 130, 180, 0.3) 20px
+            );
+            border: 3px solid #4682b4;
+            animation: cover-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes cover-pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .cover-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            white-space: nowrap;
+        }
+
+        /* Creases */
+        .crease {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: white;
+        }
+
+        .crease-top {
+            top: 15px;
+        }
+
+        .crease-bottom {
+            bottom: 15px;
+        }
+
+        /* Stumps */
+        .stumps {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 3px;
+        }
+
+        .stumps-top {
+            top: 10px;
+        }
+
+        .stumps-bottom {
+            bottom: 10px;
+        }
+
+        .stump {
+            width: 3px;
+            height: 12px;
+            background: linear-gradient(to bottom, #f5f5f5, #ddd);
+            border-radius: 1px;
+        }
+
+        /* Sight screens */
+        .sight-screen {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 25px;
+            background: white;
+            border: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .sight-screen-top {
+            top: 20px;
+        }
+
+        .sight-screen-bottom {
+            bottom: 20px;
+        }
+
+        /* Drainage indicators */
+        .drainage-area {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px dashed rgba(100, 149, 237, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .drainage-area::after {
+            content: "D";
+            color: rgba(100, 149, 237, 0.7);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .drain-1 { top: 10%; left: 10%; }
+        .drain-2 { top: 10%; right: 10%; }
+        .drain-3 { bottom: 10%; left: 10%; }
+        .drain-4 { bottom: 10%; right: 10%; }
+
+        /* End labels */
+        .end-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.5);
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+
+        .pavilion-end {
+            top: 45px;
+        }
+
+        .high-court-end {
+            bottom: 45px;
+        }
+
+        /* Boundary distance markers */
+        .distance-marker {
+            position: absolute;
+            color: rgba(255,255,255,0.7);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .distance-left { left: 30px; top: 50%; transform: translateY(-50%); }
+        .distance-right { right: 30px; top: 50%; transform: translateY(-50%); }
+        .distance-top { top: 35px; left: 50%; transform: translateX(-50%); }
+        .distance-bottom { bottom: 35px; left: 50%; transform: translateX(-50%); }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 11px;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .legend-wet {
+            background: rgba(20, 60, 20, 0.9);
+            border: 1px solid #0a3d0a;
+        }
+
+        .legend-drain {
+            border: 2px dashed rgba(100, 149, 237, 0.8);
+            background: transparent;
+        }
+
+        .legend-cover {
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(100, 149, 237, 0.5),
+                rgba(100, 149, 237, 0.5) 3px,
+                rgba(70, 130, 180, 0.5) 3px,
+                rgba(70, 130, 180, 0.5) 6px
+            );
+        }
+
+        /* Match info panel */
+        .match-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        .match-info h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .match-info p {
+            margin: 5px 0;
+            color: #aaa;
+        }
+
+        .match-info span {
+            color: #00d4ff;
+        }
+
+        /* Mist overlay */
+        .mist {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center,
+                transparent 30%,
+                rgba(150, 180, 200, 0.15) 100%);
+            pointer-events: none;
+            z-index: 4;
+        }
+
+        /* Pitch Analysis Section */
+        .pitch-analysis {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            .pitch-analysis {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Pitch Visualization */
+        .pitch-vis-container {
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .pitch-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            color: #ffd700;
+        }
+
+        .pitch-visual {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Side panels */
+        .side-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .info-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255,215,0,0.3);
+            padding-bottom: 10px;
+        }
+
+        /* Condition meters */
+        .condition-item {
+            margin-bottom: 15px;
+        }
+
+        .condition-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        .condition-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .condition-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .fill-moisture { background: linear-gradient(90deg, #4169e1, #1e90ff); width: 75%; }
+        .fill-seam { background: linear-gradient(90deg, #ff6b6b, #ee5a5a); width: 85%; }
+        .fill-spin { background: linear-gradient(90deg, #9b59b6, #8e44ad); width: 45%; }
+        .fill-pace { background: linear-gradient(90deg, #2ecc71, #27ae60); width: 55%; }
+        .fill-bounce { background: linear-gradient(90deg, #f39c12, #e67e22); width: 65%; }
+
+        /* Ball behavior list */
+        .behavior-list {
+            list-style: none;
+        }
+
+        .behavior-list li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            font-size: 12px;
+            border-left: 3px solid;
+        }
+
+        .behavior-list li.seam { border-color: #ff6b6b; }
+        .behavior-list li.swing { border-color: #3498db; }
+        .behavior-list li.spin { border-color: #9b59b6; }
+        .behavior-list li.pace { border-color: #2ecc71; }
+
+        .behavior-title {
+            font-weight: bold;
+            color: #ffd700;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Stadium Section */
+        .stadium-container {
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .stadium-title {
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-bottom: 25px;
+        }
+
+        /* Stadium SVG */
+        .stadium-svg {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+        }
+
+        /* Section styles */
+        .section-ga {
+            fill: #3498db;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-ga:hover {
+            opacity: 1;
+            filter: brightness(1.2);
+        }
+
+        .section-premium {
+            fill: #9b59b6;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-premium:hover {
+            opacity: 1;
+            filter: brightness(1.2);
+        }
+
+        .section-vip {
+            fill: #f1c40f;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-vip:hover {
+            opacity: 1;
+            filter: brightness(1.2);
+        }
+
+        .section-corporate {
+            fill: #e74c3c;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-corporate:hover {
+            opacity: 1;
+            filter: brightness(1.2);
+        }
+
+        .section-media {
+            fill: #1abc9c;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-media:hover {
+            opacity: 1;
+            filter: brightness(1.2);
+        }
+
+        .section-covered {
+            stroke: #00d4ff;
+            stroke-width: 3;
+            stroke-dasharray: 5,3;
+        }
+
+        .ground-ellipse {
+            fill: #2d5016;
+        }
+
+        .pitch-rect {
+            fill: #c4a35a;
+        }
+
+        /* Section labels */
+        .section-label {
+            font-size: 10px;
+            fill: white;
+            font-weight: bold;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+
+        .gate-label {
+            font-size: 9px;
+            fill: #ffd700;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+
+        /* Stadium side panel */
+        .stadium-layout {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            .stadium-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Legend */
+        .legend-item-stadium {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .legend-item-stadium:last-child {
+            border-bottom: none;
+        }
+
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .legend-ga { background: #3498db; }
+        .legend-premium { background: #9b59b6; }
+        .legend-vip { background: #f1c40f; }
+        .legend-corporate { background: #e74c3c; }
+        .legend-media { background: #1abc9c; }
+        .legend-covered {
+            background: transparent;
+            border: 3px dashed #00d4ff;
+        }
+
+        .legend-details {
+            flex-grow: 1;
+        }
+
+        .legend-name {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .legend-capacity {
+            font-size: 10px;
+            color: #aaa;
+        }
+
+        /* Capacity Summary */
+        .capacity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .capacity-item {
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .capacity-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .capacity-label {
+            font-size: 10px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        /* Bottom Stats */
+        .bottom-stats {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            .bottom-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card h4 {
+            color: #aaa;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-detail {
+            font-size: 11px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .rain-warning {
+            background: rgba(100, 149, 237, 0.2);
+            border: 1px solid rgba(100, 149, 237, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .rain-warning h4 {
+            color: #87ceeb;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .rain-warning ul {
+            list-style: none;
+            font-size: 11px;
+            color: #ccc;
+        }
+
+        .rain-warning li {
+            padding: 4px 0;
+        }
+
+        .rain-warning li::before {
+            content: ">";
+            margin-right: 8px;
+            color: #87ceeb;
+        }
+
+        .gates-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .gate-item {
+            background: rgba(255,255,255,0.1);
+            padding: 8px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .gate-number {
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 14px;
+        }
+
+        .summary-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .summary-section h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-item {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 3px solid #00d4ff;
+        }
+
+        .summary-item h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .summary-item p {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>EDEN GARDENS - COMPREHENSIVE CRICKET SCENARIO</h1>
+            <div class="match-info">INDIA vs PAKISTAN - T20 INTERNATIONAL</div>
+            <div class="weather-indicator">
+                <span>🌧️</span>
+                <span>Rainy Day Conditions | Visibility: Reduced | Outfield: Wet</span>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs-container">
+            <button class="tab-button active" data-tab="ground">🏟️ Ground</button>
+            <button class="tab-button" data-tab="pitch">🏏 Pitch Analysis</button>
+            <button class="tab-button" data-tab="stadium">🎪 Stadium Layout</button>
+        </div>
+
+        <!-- Tab 1: Ground -->
+        <div class="tab-content active" id="ground">
+            <div class="ground-container">
+                <div class="ground-visual">
+                    <!-- Rain effect -->
+                    <div class="rain" id="rain"></div>
+
+                    <!-- Ground oval -->
+                    <div class="ground">
+                        <!-- Water shimmer effect -->
+                        <div class="water-shimmer"></div>
+
+                        <!-- Wet patches -->
+                        <div class="wet-patch wet-patch-1"></div>
+                        <div class="wet-patch wet-patch-2"></div>
+                        <div class="wet-patch wet-patch-3"></div>
+                        <div class="wet-patch wet-patch-4"></div>
+
+                        <!-- Drainage areas -->
+                        <div class="drainage-area drain-1"></div>
+                        <div class="drainage-area drain-2"></div>
+                        <div class="drainage-area drain-3"></div>
+                        <div class="drainage-area drain-4"></div>
+
+                        <!-- Boundary rope -->
+                        <div class="boundary"></div>
+
+                        <!-- 30-yard circle -->
+                        <div class="inner-circle thirty-yard"></div>
+
+                        <!-- Sight screens -->
+                        <div class="sight-screen sight-screen-top">SIGHT SCREEN</div>
+                        <div class="sight-screen sight-screen-bottom">SIGHT SCREEN</div>
+
+                        <!-- End labels -->
+                        <div class="end-label pavilion-end">PAVILION END</div>
+                        <div class="end-label high-court-end">HIGH COURT END</div>
+
+                        <!-- Boundary distances -->
+                        <div class="distance-marker distance-left">68m</div>
+                        <div class="distance-marker distance-right">65m</div>
+                        <div class="distance-marker distance-top">64m</div>
+                        <div class="distance-marker distance-bottom">66m</div>
+
+                        <!-- Pitch with cover -->
+                        <div class="pitch-container">
+                            <div class="pitch">
+                                <div class="crease crease-top"></div>
+                                <div class="crease crease-bottom"></div>
+                                <div class="stumps stumps-top">
+                                    <div class="stump"></div>
+                                    <div class="stump"></div>
+                                    <div class="stump"></div>
+                                </div>
+                                <div class="stumps stumps-bottom">
+                                    <div class="stump"></div>
+                                    <div class="stump"></div>
+                                    <div class="stump"></div>
+                                </div>
+                            </div>
+                            <div class="pitch-cover">
+                                <span class="cover-label">PITCH COVERED</span>
+                            </div>
+                        </div>
+
+                        <!-- Mist overlay -->
+                        <div class="mist"></div>
+                    </div>
+
+                    <!-- Match info panel -->
+                    <div class="match-info">
+                        <h4>Ground Conditions</h4>
+                        <p>Outfield: <span>Wet/Slow</span></p>
+                        <p>Drainage: <span>Active</span></p>
+                        <p>Pitch Status: <span>Covered</span></p>
+                        <p>Boundary: <span>64-68m</span></p>
+                        <p>Capacity: <span>66,000</span></p>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color legend-wet"></div>
+                            <span>Wet Patches</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-drain"></div>
+                            <span>Drainage Points</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-cover"></div>
+                            <span>Pitch Cover</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: Pitch Analysis -->
+        <div class="tab-content" id="pitch">
+            <div class="pitch-analysis">
+                <!-- Pitch Visualization -->
+                <div class="pitch-vis-container">
+                    <div class="pitch-title">22-Yard Pitch Visualization</div>
+                    <div style="text-align: center; padding: 20px; color: #888;">
+                        <p>Pitch Analysis with:</p>
+                        <p style="margin-top: 10px;"><strong>Moisture Level: 75%</strong></p>
+                        <p><strong>Seam Movement: 85/100</strong></p>
+                        <p><strong>Spin Assistance: 45/100</strong></p>
+                        <p><strong>Variable Bounce: 65%</strong></p>
+                    </div>
+                </div>
+
+                <!-- Side Panel -->
+                <div class="side-panel">
+                    <!-- Pitch Conditions -->
+                    <div class="info-card">
+                        <h3>PITCH CONDITIONS</h3>
+
+                        <div class="condition-item">
+                            <div class="condition-label">
+                                <span>Moisture Level</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="condition-bar">
+                                <div class="condition-fill fill-moisture"></div>
+                            </div>
+                        </div>
+
+                        <div class="condition-item">
+                            <div class="condition-label">
+                                <span>Seam Movement</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="condition-bar">
+                                <div class="condition-fill fill-seam"></div>
+                            </div>
+                        </div>
+
+                        <div class="condition-item">
+                            <div class="condition-label">
+                                <span>Spin Assistance</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="condition-bar">
+                                <div class="condition-fill fill-spin"></div>
+                            </div>
+                        </div>
+
+                        <div class="condition-item">
+                            <div class="condition-label">
+                                <span>Pace Off Pitch</span>
+                                <span>55%</span>
+                            </div>
+                            <div class="condition-bar">
+                                <div class="condition-fill fill-pace"></div>
+                            </div>
+                        </div>
+
+                        <div class="condition-item">
+                            <div class="condition-label">
+                                <span>Variable Bounce</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="condition-bar">
+                                <div class="condition-fill fill-bounce"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ball Behavior -->
+                    <div class="info-card">
+                        <h3>BALL BEHAVIOR ANALYSIS</h3>
+                        <ul class="behavior-list">
+                            <li class="seam">
+                                <span class="behavior-title">Seam Movement</span>
+                                Enhanced lateral movement due to moisture. Ball grips surface and deviates significantly off the seam.
+                            </li>
+                            <li class="swing">
+                                <span class="behavior-title">Swing</span>
+                                Conventional swing prominent with wet ball. New ball swinging both ways in overcast conditions.
+                            </li>
+                            <li class="spin">
+                                <span class="behavior-title">Spin</span>
+                                Initial grip reduced due to surface moisture. Expected to increase as pitch dries during match.
+                            </li>
+                            <li class="pace">
+                                <span class="behavior-title">Pace</span>
+                                Ball coming slower off pitch. Batsmen need to adjust timing. Cut and pull shots less effective.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Match Prediction -->
+                    <div class="info-card">
+                        <h3>EXPECTED SCORING</h3>
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; color: #ffd700; font-weight: bold;">140-160</div>
+                            <div style="font-size: 12px; color: #aaa; margin-top: 5px;">Estimated Par Score (20 overs)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: Stadium Layout -->
+        <div class="tab-content" id="stadium">
+            <div class="stadium-layout">
+                <!-- Stadium Visualization -->
+                <div class="stadium-container">
+                    <div class="stadium-title">Bird's Eye View - Seating Arrangement</div>
+                    <svg class="stadium-svg" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Definitions -->
+                        <defs>
+                            <radialGradient id="groundGradient" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#3d6b1f"/>
+                                <stop offset="70%" stop-color="#2d5016"/>
+                                <stop offset="100%" stop-color="#1f3a0d"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Outer Stadium Ring -->
+                        <ellipse cx="400" cy="350" rx="380" ry="320" fill="#1a1a2e" stroke="#333" stroke-width="2"/>
+
+                        <!-- General Admission Sections (Sample) -->
+                        <path d="M 400 30 A 380 320 0 0 1 650 100 L 580 150 A 300 250 0 0 0 400 100 Z"
+                              class="section-ga section-covered" data-section="A" data-capacity="4500" data-covered="true"/>
+                        <path d="M 650 100 A 380 320 0 0 1 750 250 L 670 250 A 300 250 0 0 0 580 150 Z"
+                              class="section-ga section-covered" data-section="B" data-capacity="4000" data-covered="true"/>
+
+                        <!-- Premium Sections (Sample) -->
+                        <path d="M 400 120 A 280 230 0 0 1 600 180 L 540 220 A 200 160 0 0 0 400 180 Z"
+                              class="section-premium section-covered" data-section="P1" data-capacity="2000" data-covered="true"/>
+
+                        <!-- VIP Boxes -->
+                        <rect x="340" y="500" width="50" height="40" rx="5" class="section-vip section-covered"
+                              data-section="VIP-1" data-capacity="500" data-covered="true"/>
+
+                        <!-- Ground -->
+                        <ellipse cx="400" cy="350" rx="180" ry="140" fill="url(#groundGradient)" stroke="#1a5c0a" stroke-width="3"/>
+
+                        <!-- Boundary -->
+                        <ellipse cx="400" cy="350" rx="160" ry="125" fill="none" stroke="white" stroke-width="2"/>
+
+                        <!-- 30-yard circle -->
+                        <ellipse cx="400" cy="350" rx="80" ry="60" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="5,3"/>
+
+                        <!-- Pitch -->
+                        <rect x="390" y="280" width="20" height="140" fill="#c4a35a" stroke="#8b7355" stroke-width="1"/>
+
+                        <!-- Gate Labels -->
+                        <text x="400" y="15" class="gate-label">GATE 1</text>
+                        <text x="730" y="200" class="gate-label">GATE 2</text>
+                        <text x="760" y="450" class="gate-label">GATE 3</text>
+                        <text x="400" y="695" class="gate-label">GATE 4 (MAIN)</text>
+                        <text x="40" y="450" class="gate-label">GATE 5</text>
+                        <text x="70" y="200" class="gate-label">GATE 6</text>
+
+                        <!-- Section Labels -->
+                        <text x="500" y="80" class="section-label">A</text>
+                        <text x="650" y="170" class="section-label">B</text>
+                        <text x="480" y="160" class="section-label" style="font-size:8px">P1</text>
+                        <text x="365" y="525" class="section-label" style="font-size:7px">VIP</text>
+
+                        <!-- Compass -->
+                        <g transform="translate(720, 620)">
+                            <circle cx="0" cy="0" r="25" fill="rgba(0,0,0,0.5)" stroke="#ffd700" stroke-width="1"/>
+                            <text x="0" y="-10" text-anchor="middle" fill="#ffd700" font-size="10" font-weight="bold">N</text>
+                            <line x1="0" y1="-5" x2="0" y2="5" stroke="#ffd700" stroke-width="2"/>
+                            <polygon points="0,-20 -5,-12 5,-12" fill="#ffd700"/>
+                        </g>
+
+                        <!-- Pavilion End Label -->
+                        <text x="400" y="430" text-anchor="middle" fill="white" font-size="9" font-weight="bold">PAVILION END</text>
+
+                        <!-- High Court End Label -->
+                        <text x="400" y="280" text-anchor="middle" fill="white" font-size="9" font-weight="bold">HIGH COURT END</text>
+                    </svg>
+                </div>
+
+                <!-- Side Panel -->
+                <div class="side-panel">
+                    <!-- Legend -->
+                    <div class="info-card">
+                        <h3>SEATING LEGEND</h3>
+
+                        <div class="legend-item-stadium">
+                            <div class="legend-color legend-ga"></div>
+                            <div class="legend-details">
+                                <div class="legend-name">General Admission</div>
+                                <div class="legend-capacity">Sections A-L | 42,000 seats</div>
+                            </div>
+                        </div>
+
+                        <div class="legend-item-stadium">
+                            <div class="legend-color legend-premium"></div>
+                            <div class="legend-details">
+                                <div class="legend-name">Premium Seating</div>
+                                <div class="legend-capacity">Sections P1-P6 | 14,000 seats</div>
+                            </div>
+                        </div>
+
+                        <div class="legend-item-stadium">
+                            <div class="legend-color legend-vip"></div>
+                            <div class="legend-details">
+                                <div class="legend-name">VIP Boxes</div>
+                                <div class="legend-capacity">1,000 seats | Full service</div>
+                            </div>
+                        </div>
+
+                        <div class="legend-item-stadium">
+                            <div class="legend-color legend-covered"></div>
+                            <div class="legend-details">
+                                <div class="legend-name">Covered Sections</div>
+                                <div class="legend-capacity">Protected from rain</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capacity -->
+                    <div class="info-card">
+                        <h3>CAPACITY BREAKDOWN</h3>
+                        <div class="capacity-grid">
+                            <div class="capacity-item">
+                                <div class="capacity-number">66,000</div>
+                                <div class="capacity-label">Total Capacity</div>
+                            </div>
+                            <div class="capacity-item">
+                                <div class="capacity-number">38,000</div>
+                                <div class="capacity-label">Covered Seats</div>
+                            </div>
+                            <div class="capacity-item">
+                                <div class="capacity-number">6</div>
+                                <div class="capacity-label">Entry Gates</div>
+                            </div>
+                            <div class="capacity-item">
+                                <div class="capacity-number">2,500</div>
+                                <div class="capacity-label">Security Personnel</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gates -->
+                    <div class="info-card">
+                        <h3>ENTRY GATES</h3>
+                        <div class="gates-grid">
+                            <div class="gate-item">
+                                <div class="gate-number">G1</div>
+                                <div>North</div>
+                            </div>
+                            <div class="gate-item">
+                                <div class="gate-number">G2</div>
+                                <div>East</div>
+                            </div>
+                            <div class="gate-item">
+                                <div class="gate-number">G3</div>
+                                <div>SE</div>
+                            </div>
+                            <div class="gate-item">
+                                <div class="gate-number">G4</div>
+                                <div>Main</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rain Advisory -->
+                    <div class="info-card">
+                        <h3>RAIN ADVISORY</h3>
+                        <div class="rain-warning">
+                            <h4>Rainy Day Guidelines</h4>
+                            <ul>
+                                <li>58% of seats are under roof cover</li>
+                                <li>Rain ponchos available at merchandise stalls</li>
+                                <li>Seek covered areas during heavy rain</li>
+                                <li>Emergency shelters at all gate areas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Stats -->
+            <div class="bottom-stats">
+                <div class="stat-card">
+                    <h4>Floodlights</h4>
+                    <div class="stat-value">4</div>
+                    <div class="stat-detail">Towers with LED lights</div>
+                </div>
+                <div class="stat-card">
+                    <h4>Restrooms</h4>
+                    <div class="stat-value">48</div>
+                    <div class="stat-detail">Facilities across venue</div>
+                </div>
+                <div class="stat-card">
+                    <h4>First Aid</h4>
+                    <div class="stat-value">8</div>
+                    <div class="stat-detail">Medical stations</div>
+                </div>
+                <div class="stat-card">
+                    <h4>Security</h4>
+                    <div class="stat-value">2500+</div>
+                    <div class="stat-detail">Personnel deployed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary-section">
+            <h2>🎯 Match Overview - Rainy Day Scenario</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h3>Ground Impact</h3>
+                    <p>Wet outfield with 4 mapped wet patches. Reduced visibility (80-90%). Drainage operating at 80% capacity. Pitch covered and protected. Match readiness: 85%</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Pitch Characteristics</h3>
+                    <p>Surface moisture: 75% vs normal 25-30%. Seam movement: VERY HIGH (85/100). Swing: HIGH (75/100). Par score reduced to 140-160 runs. Strong advantage for bowling teams.</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Tactical Recommendation</h3>
+                    <p>Toss decision: BOWL FIRST. Historical data shows 62% win rate for teams batting second in rainy conditions. Early overs favor seamers significantly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create rain drops
+        function createRain() {
+            const rainContainer = document.getElementById('rain');
+            if (!rainContainer) return;
+            const numberOfDrops = 100;
+
+            for (let i = 0; i < numberOfDrops; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'rain-drop';
+                drop.style.left = Math.random() * 100 + '%';
+                drop.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                drop.style.opacity = Math.random() * 0.5 + 0.3;
+                rainContainer.appendChild(drop);
+            }
+        }
+
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+
+                // Create rain if ground tab is clicked
+                if (tabId === 'ground') {
+                    createRain();
+                }
+            });
+        });
+
+        // Initialize rain on page load
+        createRain();
+    </script>
+</body>
+</html>
