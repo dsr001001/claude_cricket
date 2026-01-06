@@ -1,0 +1,277 @@
+=============================================================================
+                    CRICKET SCENARIO ORCHESTRATOR - INSTRUCTION LOG
+                    Eden Gardens T20: India vs Pakistan (Rainy Day)
+=============================================================================
+
+=============================================================================
+INSTRUCTION REGISTRY
+=============================================================================
+
+------------------------------------------------------------------------------
+INST-001: GROUND AGENT INSTRUCTIONS
+------------------------------------------------------------------------------
+Target Agent: ground-agent
+Timestamp: 2026-01-06
+Context: Initial ground preparation and visualization
+
+EXACT INSTRUCTION:
+"""
+Create an HTML visualization for Eden Gardens cricket ground for a T20 match
+between India and Pakistan on a rainy day.
+
+SPECIFICATIONS:
+1. Ground Dimensions:
+   - Playing area: Approximately 150m x 140m oval
+   - Boundary: 64-68 meters from center
+   - Pitch at center: 22 yards (20.12m)
+
+2. Visual Elements to Include:
+   - Outfield in appropriate green color with rain effect overlay
+   - Boundary rope clearly marked
+   - Pitch strip at center
+   - Sight screens at both ends
+   - Player positions (optional)
+   - Wet/damp patches on outfield (rain effect)
+   - Drainage areas highlighted
+
+3. Weather Effects to Visualize:
+   - Rain drops/mist effect on the ground
+   - Darker wet patches on outfield
+   - Covered pitch area (pitch covers shown)
+   - Wet boundary rope indication
+
+4. Styling Requirements:
+   - Professional cricket broadcast quality appearance
+   - Include ground name label "EDEN GARDENS"
+   - Match details overlay: "INDIA vs PAKISTAN - T20I"
+   - Weather indicator showing rainy conditions
+
+5. Technical Requirements:
+   - Self-contained HTML file
+   - CSS animations for rain effect
+   - Responsive design
+   - Save to: C:\Users\vboxvr03\Downloads\claude_cricket\ground.html
+
+6. Additional Documentation:
+   - Save ground details and preparation notes to:
+     C:\Users\vboxvr03\Downloads\claude_cricket\ground.txt
+   - Include outfield condition assessment
+   - Document drainage effectiveness
+   - Note any areas prone to water accumulation
+"""
+
+PARAMETERS:
+- Output format: HTML + TXT
+- Primary file: ground.html
+- Documentation: ground.txt
+- Weather context: Rainy day
+- Match context: India vs Pakistan T20I
+
+------------------------------------------------------------------------------
+INST-002: PITCH AGENT INSTRUCTIONS
+------------------------------------------------------------------------------
+Target Agent: pitch-agent
+Timestamp: 2026-01-06
+Context: Pitch conditions and visualization for rainy day T20
+
+EXACT INSTRUCTION:
+"""
+Create a detailed pitch visualization and documentation for the Eden Gardens
+T20 match between India and Pakistan under rainy day conditions.
+
+SPECIFICATIONS:
+
+1. PITCH PHYSICAL CHARACTERISTICS:
+   - Length: 22 yards (20.12 meters)
+   - Width: 10 feet (3.05 meters)
+   - Kolkata pitch type: Red clay with black soil mixture
+   - Typical Eden Gardens characteristics: Initially good for batting,
+     assists spinners as match progresses
+
+2. RAINY DAY PITCH CONDITIONS TO DOCUMENT:
+   a) Moisture Impact:
+      - Surface moisture levels (percentage estimate)
+      - Sub-surface moisture penetration
+      - Drying time estimates under covers
+
+   b) Ball Behavior Changes:
+      - Seam movement: Enhanced due to moisture
+      - Swing: Conventional swing more likely with wet ball
+      - Spin: Initial grip reduced, increases as pitch dries
+      - Pace: Slower off the pitch due to moisture absorption
+      - Bounce: Variable bounce expected, some balls may keep low
+
+   c) Batting Challenges:
+      - Ball skidding through at variable heights
+      - Timing more difficult on slower surface
+      - Driving on the up risky due to variable bounce
+
+   d) Bowling Advantages:
+      - Seam bowlers: Significant advantage in first 6 overs
+      - Spinners: May grip more as moisture reduces
+      - Slower ball variations more effective
+
+3. VISUALIZATION REQUIREMENTS:
+   Create an HTML file (pitch.html) showing:
+   - Top-down view of the 22-yard pitch
+   - Moisture gradient visualization (wetter areas darker)
+   - Good length zone highlighted
+   - Crack patterns (if any)
+   - Batting and bowling ends marked
+   - Ball behavior trajectory indicators
+   - Color-coded zones showing:
+     * High moisture areas
+     * Good batting areas
+     * Danger zones for batsmen
+     * Sweet spots for bowlers
+
+4. STYLING:
+   - Professional cricket analysis style
+   - Match context header: India vs Pakistan T20I
+   - Rainy day condition indicator
+   - Legend explaining all visual elements
+   - Ball behavior animation (optional)
+
+5. DOCUMENTATION:
+   Create pitch.txt containing:
+   - Detailed pitch report
+   - Curator's assessment
+   - Historical data for rainy day matches at Eden Gardens
+   - Recommendations for team strategies
+   - How pitch conditions will evolve during the match
+   - Expected scores based on conditions
+
+6. FILE PATHS:
+   - HTML: C:\Users\vboxvr03\Downloads\claude_cricket\pitch.html
+   - Documentation: C:\Users\vboxvr03\Downloads\claude_cricket\pitch.txt
+
+CONTEXT FROM GROUND AGENT:
+- Pitch was covered with waterproof PVC sheeting
+- Ground moisture is high overall
+- Visibility reduced to 80-90%
+- Drainage system operational but outfield wet
+"""
+
+PARAMETERS:
+- Output format: HTML + TXT
+- Primary file: pitch.html
+- Documentation: pitch.txt
+- Weather context: Rainy day with pitch protected by covers
+- Match context: India vs Pakistan T20I at Eden Gardens
+
+------------------------------------------------------------------------------
+INST-003: STADIUM AGENT INSTRUCTIONS
+------------------------------------------------------------------------------
+Target Agent: stadium-agent
+Timestamp: 2026-01-06
+Context: Stadium layout and seating for India vs Pakistan T20
+
+EXACT INSTRUCTION:
+"""
+Create a comprehensive stadium layout visualization for Eden Gardens showing
+seating arrangements for the India vs Pakistan T20 International match on a
+rainy day.
+
+SPECIFICATIONS:
+
+1. STADIUM CONFIGURATION:
+   - Total Capacity: 66,000 seats
+   - Shape: Oval/horseshoe configuration
+   - Tiers: Multi-level seating (Lower, Middle, Upper)
+   - Renovated modern stadium layout
+
+2. SEATING SECTIONS TO INCLUDE:
+
+   a) General Admission (GA):
+      - Lower tier general seating
+      - Capacity: ~40,000
+      - Sections: A through P around the ground
+
+   b) Premium Seating:
+      - Club stands with better views
+      - Capacity: ~12,000
+      - Located at prime viewing positions
+
+   c) VIP/Corporate Boxes:
+      - Hospitality suites
+      - Corporate boxes
+      - Capacity: ~4,000
+      - Located in main pavilion area
+
+   d) Special Areas:
+      - Media box and press gallery
+      - Commentary positions
+      - Players' balcony
+      - Team dressing rooms
+      - Match officials' area
+
+3. RAINY DAY CONSIDERATIONS:
+   - Highlight covered seating areas
+   - Show uncovered sections that may be affected
+   - Rain shelter zones for spectators
+   - Emergency evacuation routes
+   - Covered walkways
+
+4. INDIA VS PAKISTAN MATCH SPECIFICS:
+   - Enhanced security zones
+   - Segregated supporter sections (if applicable)
+   - Additional security checkpoints
+   - First aid and emergency stations
+   - Police and steward positioning
+
+5. STADIUM FACILITIES:
+   - Food court locations
+   - Restroom facilities
+   - Entry/exit gates (numbered)
+   - Parking areas
+   - Drop-off zones
+   - Merchandise stalls
+
+6. VISUALIZATION REQUIREMENTS:
+   Create stadium.html showing:
+   - Bird's eye view of entire stadium
+   - Color-coded seating sections
+   - Legend explaining all sections
+   - Capacity indicators for each section
+   - Rain cover indicators
+   - Security zones
+   - Professional stadium diagram style
+
+7. STYLING:
+   - Modern sports venue presentation
+   - India vs Pakistan match branding
+   - Clear section labeling
+   - Interactive hover effects (optional)
+   - Rain/weather indicator
+
+8. DOCUMENTATION:
+   Create stadium.txt containing:
+   - Complete seating breakdown by section
+   - Capacity details for each tier
+   - Facilities list and locations
+   - Security protocol overview
+   - Rain contingency plans
+   - Spectator guidelines for rainy conditions
+
+9. FILE PATHS:
+   - HTML: C:\Users\vboxvr03\Downloads\claude_cricket\stadium.html
+   - Documentation: C:\Users\vboxvr03\Downloads\claude_cricket\stadium.txt
+
+CONTEXT FROM PREVIOUS AGENTS:
+- Ground has active drainage system (from Ground Agent)
+- Match expected to proceed despite rain
+- Reduced visibility conditions (80-90%)
+- Weather: Overcast with intermittent rain
+"""
+
+PARAMETERS:
+- Output format: HTML + TXT
+- Primary file: stadium.html
+- Documentation: stadium.txt
+- Weather context: Rainy day with rain shelter considerations
+- Match context: High-security India vs Pakistan T20I
+- Capacity: 66,000 seats
+
+=============================================================================
+END OF INSTRUCTION REGISTRY
+=============================================================================

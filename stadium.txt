@@ -1,0 +1,636 @@
+=============================================================================
+                    EDEN GARDENS STADIUM DOCUMENTATION
+                    India vs Pakistan T20I - Stadium Layout & Seating
+                    Date: January 6, 2026
+=============================================================================
+
+STADIUM OVERVIEW
+================
+
+Official Name: Eden Gardens
+Alternative Names: Ranji Stadium (historically)
+Location: B.B.D. Bagh, Kolkata, West Bengal, India
+Established: 1864
+Major Renovation: 2011 (for Cricket World Cup)
+Total Capacity: 66,000 (post-renovation, reduced from 100,000)
+Owner: Cricket Association of Bengal (CAB)
+
+STADIUM CONFIGURATION
+=====================
+
+Structure Type: Oval/Horseshoe configuration
+Orientation: North-South along long axis
+Seating Tiers: Three main levels (Lower, Middle, Upper)
+Roof Coverage: Approximately 58% of seating covered
+
+=============================================================================
+SECTION 1: SEATING BREAKDOWN BY SECTION
+=============================================================================
+
+UPPER TIER - GENERAL ADMISSION (GA)
+-----------------------------------
+
+Section A (North)
+- Location: Upper tier, north end
+- Capacity: 4,500 seats
+- Coverage: FULLY COVERED
+- Entry Gate: Gate 1
+- View: Behind bowler's arm (High Court End)
+- Price Category: Standard
+
+Section B (Northeast)
+- Location: Upper tier, northeast corner
+- Capacity: 4,000 seats
+- Coverage: FULLY COVERED
+- Entry Gate: Gate 2
+- View: Side-on, slight angle
+- Price Category: Standard
+
+Section C (East)
+- Location: Upper tier, east side
+- Capacity: 3,500 seats
+- Coverage: PARTIALLY COVERED (40%)
+- Entry Gate: Gate 2
+- View: Side-on
+- Price Category: Standard
+
+Section D (Southeast)
+- Location: Upper tier, southeast corner
+- Capacity: 3,500 seats
+- Coverage: NOT COVERED
+- Entry Gate: Gate 3
+- View: Side-on, angle view
+- Price Category: Budget
+
+Section E (South-Southeast)
+- Location: Upper tier, south-southeast
+- Capacity: 4,000 seats
+- Coverage: NOT COVERED
+- Entry Gate: Gate 3
+- View: Behind bowler's arm view
+- Price Category: Budget
+
+Section F (South - Premium)
+- Location: Upper tier, south (Pavilion End)
+- Capacity: 3,000 seats
+- Coverage: FULLY COVERED
+- Entry Gate: Gate 4 (Main)
+- View: Behind bowler's arm (Pavilion End)
+- Price Category: Premium
+
+Section G (South-Southwest - Premium)
+- Location: Upper tier, south-southwest
+- Capacity: 3,000 seats
+- Coverage: FULLY COVERED
+- Entry Gate: Gate 4 (Main)
+- View: Behind bowler's arm view
+- Price Category: Premium
+
+Section H (Southwest)
+- Location: Upper tier, southwest corner
+- Capacity: 4,000 seats
+- Coverage: NOT COVERED
+- Entry Gate: Gate 5
+- View: Side-on, angle view
+- Price Category: Budget
+
+Section I (West-Southwest)
+- Location: Upper tier, west-southwest
+- Capacity: 3,500 seats
+- Coverage: NOT COVERED
+- Entry Gate: Gate 5
+- View: Side-on
+- Price Category: Budget
+
+Section J (West)
+- Location: Upper tier, west side
+- Capacity: 3,500 seats
+- Coverage: PARTIALLY COVERED (40%)
+- Entry Gate: Gate 6
+- View: Side-on
+- Price Category: Standard
+
+Section K (Northwest)
+- Location: Upper tier, northwest corner
+- Capacity: 4,000 seats
+- Coverage: FULLY COVERED
+- Entry Gate: Gate 6
+- View: Side-on, slight angle
+- Price Category: Standard
+
+Section L (North-Northwest)
+- Location: Upper tier, north-northwest
+- Capacity: 4,500 seats
+- Coverage: FULLY COVERED
+- Entry Gate: Gate 1
+- View: Behind bowler's arm (High Court End)
+- Price Category: Standard
+
+UPPER TIER SUBTOTAL: 45,000 seats
+
+MIDDLE TIER - PREMIUM SEATING
+-----------------------------
+
+Section P1 (Premium North)
+- Location: Middle tier, north section
+- Capacity: 2,000 seats
+- Coverage: FULLY COVERED
+- Amenities: Cushioned seats, wider spacing, dedicated food service
+- Entry: Gate 1 (Premium entrance)
+- Price Category: Premium Plus
+
+Section P2 (Premium East)
+- Location: Middle tier, east section
+- Capacity: 2,500 seats
+- Coverage: PARTIALLY COVERED (50%)
+- Amenities: Cushioned seats, wider spacing
+- Entry: Gate 2 (Premium entrance)
+- Price Category: Premium
+
+Section P3 (Premium Southeast)
+- Location: Middle tier, southeast section
+- Capacity: 2,500 seats
+- Coverage: NOT COVERED
+- Amenities: Cushioned seats, wider spacing
+- Entry: Gate 3 (Premium entrance)
+- Price Category: Premium (reduced due to exposure)
+
+Section P4 (Premium Southwest)
+- Location: Middle tier, southwest section
+- Capacity: 2,500 seats
+- Coverage: NOT COVERED
+- Amenities: Cushioned seats, wider spacing
+- Entry: Gate 5 (Premium entrance)
+- Price Category: Premium (reduced due to exposure)
+
+Section P5 (Premium West)
+- Location: Middle tier, west section
+- Capacity: 2,500 seats
+- Coverage: PARTIALLY COVERED (50%)
+- Amenities: Cushioned seats, wider spacing
+- Entry: Gate 6 (Premium entrance)
+- Price Category: Premium
+
+Section P6 (Premium North-West)
+- Location: Middle tier, northwest section
+- Capacity: 2,000 seats
+- Coverage: FULLY COVERED
+- Amenities: Cushioned seats, wider spacing, dedicated food service
+- Entry: Gate 1 (Premium entrance)
+- Price Category: Premium Plus
+
+PREMIUM TIER SUBTOTAL: 14,000 seats
+
+VIP & CORPORATE HOSPITALITY
+---------------------------
+
+VIP Box 1
+- Location: Main Pavilion, south stand, center-left
+- Capacity: 500 seats
+- Coverage: FULLY COVERED (Indoor climate controlled)
+- Amenities: Lounge seating, dedicated waiters, private bar,
+  gourmet catering, private restrooms, TV monitors
+- Access: Private entrance via Gate 4
+- Price Category: VIP (INR 50,000+)
+
+VIP Box 2
+- Location: Main Pavilion, south stand, center-right
+- Capacity: 500 seats
+- Coverage: FULLY COVERED (Indoor climate controlled)
+- Amenities: Same as VIP Box 1
+- Access: Private entrance via Gate 4
+- Price Category: VIP (INR 50,000+)
+
+Corporate Box 1 (CORP-1)
+- Location: Main Pavilion, left wing
+- Capacity: 300 seats (12 private suites x 25 seats)
+- Coverage: FULLY COVERED
+- Amenities: Private suites, full catering, dedicated host,
+  private viewing area, business facilities
+- Access: Private corporate entrance
+- Price Category: Corporate (Full suite rental)
+
+Corporate Box 2 (CORP-2)
+- Location: Main Pavilion, right wing
+- Capacity: 300 seats (12 private suites x 25 seats)
+- Coverage: FULLY COVERED
+- Amenities: Same as CORP-1
+- Access: Private corporate entrance
+- Price Category: Corporate (Full suite rental)
+
+Corporate Box 3 (CORP-3)
+- Location: Upper pavilion, left
+- Capacity: 200 seats (8 suites x 25 seats)
+- Coverage: FULLY COVERED
+- Amenities: Semi-private suites, catering available
+- Access: Premium entrance via Gate 4
+- Price Category: Corporate Standard
+
+Corporate Box 4 (CORP-4)
+- Location: Upper pavilion, right
+- Capacity: 200 seats (8 suites x 25 seats)
+- Coverage: FULLY COVERED
+- Amenities: Same as CORP-3
+- Access: Premium entrance via Gate 4
+- Price Category: Corporate Standard
+
+VIP/CORPORATE SUBTOTAL: 2,000 seats
+
+MEDIA & PRESS FACILITIES
+------------------------
+
+Main Media Box
+- Location: Center pavilion, above VIP boxes
+- Capacity: 200 positions
+- Coverage: FULLY COVERED (Enclosed)
+- Amenities: Work desks, power outlets, WiFi, monitors,
+  press conference access
+- Access: Media entrance (Gate 4 - Media lane)
+
+Commentary Box 1
+- Location: Pavilion left, elevated position
+- Capacity: 50 positions (5 broadcast booths)
+- Coverage: FULLY COVERED (Sound-proofed)
+- Amenities: Broadcast equipment, monitors, air conditioning
+- Users: TV commentary teams
+
+Commentary Box 2
+- Location: Pavilion right, elevated position
+- Capacity: 50 positions (5 broadcast booths)
+- Coverage: FULLY COVERED (Sound-proofed)
+- Amenities: Same as Commentary Box 1
+- Users: Radio and digital commentary teams
+
+MEDIA SUBTOTAL: 300 positions
+
+=============================================================================
+TOTAL CAPACITY SUMMARY
+=============================================================================
+
+General Admission (Upper Tier):    45,000 seats
+Premium Seating (Middle Tier):     14,000 seats
+VIP Boxes:                          1,000 seats
+Corporate Hospitality:              1,000 seats
+Media/Press:                          300 positions
+Other (Officials, Staff, etc.):     4,700 seats
+
+GRAND TOTAL:                       66,000 seats
+
+COVERAGE BREAKDOWN:
+- Fully Covered Seats:             38,000 (58%)
+- Partially Covered:                5,500 (8%)
+- Uncovered:                       22,500 (34%)
+
+=============================================================================
+SECTION 2: STADIUM FACILITIES
+=============================================================================
+
+ENTRY GATES
+-----------
+
+Gate 1 (North Gate)
+- Location: North end of stadium
+- Serving Sections: A, L, P1, P6
+- Security Checkpoints: 3
+- Capacity: 12,000 entries/hour
+- Facilities: Ticket counters, help desk, first aid
+
+Gate 2 (East Gate)
+- Location: East side
+- Serving Sections: B, C, P2
+- Security Checkpoints: 2
+- Capacity: 10,000 entries/hour
+- Facilities: Ticket counters, ATM
+
+Gate 3 (Southeast Gate)
+- Location: Southeast corner
+- Serving Sections: D, E, P3
+- Security Checkpoints: 2
+- Capacity: 10,000 entries/hour
+- Facilities: Ticket counters
+
+Gate 4 (Main Gate / Pavilion Gate)
+- Location: South (Main Pavilion entrance)
+- Serving Sections: F, G, VIP, Corporate, Media
+- Security Checkpoints: 5 (highest security)
+- Capacity: 8,000 entries/hour
+- Facilities: VIP reception, media accreditation, corporate check-in
+
+Gate 5 (Southwest Gate)
+- Location: Southwest corner
+- Serving Sections: H, I, P4
+- Security Checkpoints: 2
+- Capacity: 10,000 entries/hour
+- Facilities: Ticket counters
+
+Gate 6 (West Gate)
+- Location: West side
+- Serving Sections: J, K, P5
+- Security Checkpoints: 2
+- Capacity: 10,000 entries/hour
+- Facilities: Ticket counters, help desk
+
+FOOD & BEVERAGE
+---------------
+
+Food Courts (22 locations throughout stadium):
+- Upper Tier: 12 food courts (1 per 2 sections)
+- Premium Tier: 6 food courts
+- VIP/Corporate: Private dining facilities
+- Pavilion Area: 4 premium restaurants
+
+Menu Options:
+- Indian cuisine (vegetarian and non-vegetarian)
+- Fast food (burgers, sandwiches, wraps)
+- Snacks (samosas, pakoras, chips)
+- Beverages (soft drinks, tea, coffee, water)
+- Note: No alcohol permitted in general areas
+
+RESTROOM FACILITIES
+-------------------
+
+Total Facilities: 48 restroom blocks
+- Upper Tier: 24 blocks (2 per section)
+- Premium Tier: 12 blocks
+- VIP/Corporate: 8 private facilities
+- Staff/Officials: 4 facilities
+
+Each Block Contains:
+- Male section: 10 urinals, 5 cubicles
+- Female section: 10 cubicles
+- Accessible facilities: 2 cubicles per block
+
+MEDICAL FACILITIES
+------------------
+
+First Aid Stations: 8 locations
+- Gate 1 station (North)
+- Gate 2 station (East)
+- Gate 3 station (Southeast)
+- Gate 4 station (Main - largest)
+- Gate 5 station (Southwest)
+- Gate 6 station (West)
+- Premium tier station (Central)
+- Field-side medical room
+
+Ambulance Bay: 4 vehicles stationed at Gate 4
+
+Medical Staff: 50 personnel on duty
+
+MERCHANDISE & RETAIL
+--------------------
+
+Official Merchandise Stores: 8 locations
+- Main Store: Gate 4 entrance (largest)
+- Secondary: Gates 1, 2, 3, 5, 6
+- Premium Level: 2 stores
+
+Available Items:
+- Team jerseys (India, Pakistan)
+- Caps, scarves, flags
+- Memorabilia
+- Match programs
+- Rain ponchos (especially for this match)
+
+=============================================================================
+SECTION 3: INDIA VS PAKISTAN - SPECIAL ARRANGEMENTS
+=============================================================================
+
+ENHANCED SECURITY PROTOCOL
+--------------------------
+
+Security Personnel Deployment:
+- Police officers: 1,200
+- Private security: 800
+- Stewards: 500
+- TOTAL: 2,500 personnel
+
+Security Measures:
+1. Multiple-layer frisking at all gates
+2. Metal detector screening
+3. Bag size restrictions (max A4 size)
+4. Prohibited items checked extensively
+5. CCTV coverage: 500+ cameras
+6. Facial recognition at VIP gates
+7. Anti-drone systems activated
+
+Prohibited Items:
+- Large bags and backpacks
+- Glass bottles and cans
+- Umbrellas (replaced with rain ponchos)
+- Fireworks and flares
+- Laser pointers
+- Banners larger than 1m x 1m
+- Musical instruments (horns, drums)
+- Any sharp objects
+
+Arrival Recommendation:
+- General admission: 3 hours before match
+- Premium/VIP: 2 hours before match
+- Media: 4 hours before match (accreditation)
+
+SUPPORTER ZONES
+---------------
+
+Note: Unlike some venues, Eden Gardens does not enforce strict
+segregation of Indian and Pakistani supporters. However, certain
+sections have natural congregations:
+
+Predominantly Indian Supporter Areas:
+- Sections A, B, K, L (North - historical Indian supporter zone)
+- Section F, G (Premium - typically Indian corporate buyers)
+
+Mixed Areas:
+- Sections C, D, E, H, I, J (Side stands)
+
+Neutral Zones:
+- VIP and Corporate (typically neutral/diplomatic guests)
+
+Steward Hotspots:
+- Additional stewards positioned between sections
+- Quick response teams stationed throughout
+- De-escalation trained personnel in all areas
+
+EMERGENCY EVACUATION
+--------------------
+
+Evacuation Routes (6 primary):
+1. North evacuation: Sections A, L -> Gate 1 -> B.B.D. Bagh Road
+2. East evacuation: Sections B, C -> Gate 2 -> Strand Road
+3. Southeast evacuation: Sections D, E -> Gate 3 -> Eden Gardens Road
+4. South evacuation: Sections F, G, VIP -> Gate 4 -> Maidan
+5. Southwest evacuation: Sections H, I -> Gate 5 -> Red Road
+6. West evacuation: Sections J, K -> Gate 6 -> J.L. Nehru Road
+
+Evacuation Capacity: Full stadium evacuation in 15 minutes
+
+Assembly Points:
+- Maidan open ground (primary - 50,000 capacity)
+- B.B.D. Bagh (secondary - 20,000 capacity)
+
+=============================================================================
+SECTION 4: RAINY DAY CONTINGENCY
+=============================================================================
+
+RAIN SHELTER PROTOCOL
+---------------------
+
+Covered Seating Distribution:
+- Sections A, B, K, L: Fully covered (18,500 seats)
+- Sections F, G: Fully covered (6,000 seats)
+- Sections P1, P6: Fully covered (4,000 seats)
+- VIP/Corporate: Fully covered (2,000 seats)
+- Media: Fully enclosed (300 positions)
+- Partial cover (C, J, P2, P5): 5,500 seats
+TOTAL PROTECTED: ~36,300 (55%)
+
+Rain Shelter Zones:
+- All gate areas have covered waiting zones
+- Food court areas provide temporary shelter
+- Concourse areas under stands are covered
+- Emergency rain shelters deployed at uncovered sections
+
+Rain Ponchos:
+- Available at all merchandise stores
+- 10,000 complimentary ponchos distributed at gates
+- Additional stock: 20,000 units
+
+SPECTATOR GUIDELINES (RAINY CONDITIONS)
+---------------------------------------
+
+Before Arrival:
+1. Check match status on official website/app
+2. Bring light rain jacket (ponchos available inside)
+3. Waterproof footwear recommended
+4. Keep electronic devices in waterproof covers
+5. Arrive early to secure covered seating if available
+
+During Match:
+1. Follow stadium announcements regarding weather
+2. Move to covered areas during heavy rain
+3. Avoid metal structures during lightning
+4. Do not stand on wet surfaces (slip hazard)
+5. Keep tickets dry for verification
+
+Weather Interruption Protocol:
+1. Light rain: Match continues
+2. Moderate rain: Covers on pitch, short delay
+3. Heavy rain: Longer delay, spectators remain seated
+4. Severe weather: Match suspended, evacuation if needed
+
+DLS INFORMATION (For Spectators):
+- If rain reduces play, Duckworth-Lewis-Stern applies
+- Minimum overs for result: 5 overs per side
+- Updated targets displayed on scoreboard
+- Final result may be calculated mathematically
+
+FACILITY ADJUSTMENTS FOR RAIN
+-----------------------------
+
+Food Courts:
+- Additional covered seating deployed
+- Hot beverages prioritized
+- Dry snacks available
+
+Restrooms:
+- Slip mats placed at entrances
+- Additional cleaning frequency
+- Hand dryers activated
+
+Walkways:
+- Anti-slip mats on ramps
+- Wet floor signs displayed
+- Staff stationed to assist
+
+=============================================================================
+SECTION 5: BROADCAST & MEDIA INFRASTRUCTURE
+=============================================================================
+
+TELEVISION BROADCAST
+--------------------
+
+Camera Positions: 22 locations
+- Main camera: Pavilion end (elevated)
+- Reverse camera: High Court end
+- Square cameras: 4 (2 each side)
+- Stump cameras: 4 (2 per end)
+- Spider cam: 1 (overhead)
+- Player cameras: 6 (dressing rooms, tunnel)
+- Crowd cameras: 4
+
+Broadcast Quality: 4K Ultra HD ready
+LED Screens: 2 giant screens (east and west stands)
+
+COMMENTARY FACILITIES
+---------------------
+
+Radio Commentary: 3 booths
+TV Commentary: 4 booths
+Digital/Online: 2 booths
+International Feeds: 1 booth
+
+Languages: English, Hindi, Urdu, Bengali, Tamil
+
+PRESS FACILITIES
+----------------
+
+Press Box: 200 seats
+Press Conference Room: 100 seats
+Mixed Zone: 50 positions
+Interview Room: 2 rooms
+
+WiFi: Dedicated media network (1 Gbps)
+Power: Individual power points at all positions
+
+=============================================================================
+SECTION 6: STADIUM OPERATIONS CONTACTS
+=============================================================================
+
+Emergency Numbers (Inside Stadium):
+- Medical Emergency: Dial 100 (internal) or find steward
+- Security Emergency: Dial 101 (internal) or approach police
+- Lost & Found: Gate 4 main office
+- Help Desk: Available at all gates
+
+Stadium Management:
+Cricket Association of Bengal (CAB)
+Eden Gardens, Kolkata - 700021
+Email: info@cabcricket.com
+
+Match Day Information:
+- Hotline: Available on ticket
+- Website: www.bcci.tv / www.pcb.com.pk
+- Social Media: @BCCI / @TheRealPCB
+
+=============================================================================
+APPENDIX: STADIUM MAP REFERENCE
+=============================================================================
+
+         GATE 1 (North)
+              |
+    L    |----+---|    A
+         |       |
+   K     |       |     B
+         |       |
+ GATE 6--+       +--GATE 2
+         |       |
+   J     |       |     C
+         |       |
+   I     | FIELD |     D
+         |       |
+ GATE 5--+       +--GATE 3
+         |       |
+   H     |       |     E
+         |       |
+    G    |---+---|     F
+             |
+         GATE 4 (Main/Pavilion)
+
+Legend:
+- Sections A-L: Upper tier general admission
+- P1-P6: Premium tier (inner ring)
+- VIP/Corporate: Pavilion area (south)
+
+=============================================================================
+                    END OF STADIUM DOCUMENTATION
+=============================================================================

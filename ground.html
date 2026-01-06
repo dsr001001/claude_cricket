@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Gardens - India vs Pakistan T20I</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .match-header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            z-index: 10;
+        }
+
+        .venue-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #ffd700, #ffed4a, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .match-title {
+            font-size: 1.5rem;
+            color: #00d4ff;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        .weather-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            color: #87ceeb;
+        }
+
+        .weather-icon {
+            font-size: 1.5rem;
+        }
+
+        .ground-container {
+            position: relative;
+            width: 700px;
+            height: 600px;
+        }
+
+        /* Rain effect overlay */
+        .rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .rain-drop {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, transparent, rgba(174, 194, 224, 0.6));
+            animation: rain-fall linear infinite;
+        }
+
+        @keyframes rain-fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(700px);
+                opacity: 0;
+            }
+        }
+
+        /* Ground (oval) */
+        .ground {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center,
+                #2d5016 0%,
+                #3d6b1f 30%,
+                #2a4a12 60%,
+                #1f3a0d 100%);
+            box-shadow:
+                0 0 60px rgba(0,0,0,0.5),
+                inset 0 0 100px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* Wet patches on outfield */
+        .wet-patch {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(20, 60, 20, 0.7);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .wet-patch-1 {
+            width: 80px;
+            height: 60px;
+            top: 15%;
+            left: 20%;
+        }
+
+        .wet-patch-2 {
+            width: 100px;
+            height: 70px;
+            top: 60%;
+            right: 15%;
+        }
+
+        .wet-patch-3 {
+            width: 70px;
+            height: 50px;
+            bottom: 20%;
+            left: 25%;
+        }
+
+        .wet-patch-4 {
+            width: 60px;
+            height: 45px;
+            top: 30%;
+            right: 25%;
+        }
+
+        /* Water shimmer effect */
+        .water-shimmer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                transparent 40%,
+                rgba(255,255,255,0.05) 50%,
+                transparent 60%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        /* Boundary rope */
+        .boundary {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 560px;
+            height: 460px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        /* Inner circles */
+        .inner-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 2px dashed rgba(255,255,255,0.4);
+        }
+
+        .thirty-yard {
+            width: 280px;
+            height: 230px;
+        }
+
+        /* Pitch */
+        .pitch-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 180px;
+        }
+
+        .pitch {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                #c4a35a 0%,
+                #d4b56a 25%,
+                #c4a35a 50%,
+                #d4b56a 75%,
+                #c4a35a 100%);
+            border: 2px solid #8b7355;
+            position: relative;
+        }
+
+        /* Pitch cover (wet protection) */
+        .pitch-cover {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(100, 149, 237, 0.3),
+                rgba(100, 149, 237, 0.3) 10px,
+                rgba(70, 130, 180, 0.3) 10px,
+                rgba(70, 130, 180, 0.3) 20px
+            );
+            border: 3px solid #4682b4;
+            animation: cover-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes cover-pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .cover-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            white-space: nowrap;
+        }
+
+        /* Creases */
+        .crease {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: white;
+        }
+
+        .crease-top {
+            top: 15px;
+        }
+
+        .crease-bottom {
+            bottom: 15px;
+        }
+
+        /* Stumps */
+        .stumps {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 3px;
+        }
+
+        .stumps-top {
+            top: 10px;
+        }
+
+        .stumps-bottom {
+            bottom: 10px;
+        }
+
+        .stump {
+            width: 3px;
+            height: 12px;
+            background: linear-gradient(to bottom, #f5f5f5, #ddd);
+            border-radius: 1px;
+        }
+
+        /* Sight screens */
+        .sight-screen {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 25px;
+            background: white;
+            border: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .sight-screen-top {
+            top: 20px;
+        }
+
+        .sight-screen-bottom {
+            bottom: 20px;
+        }
+
+        /* Drainage indicators */
+        .drainage-area {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px dashed rgba(100, 149, 237, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .drainage-area::after {
+            content: "D";
+            color: rgba(100, 149, 237, 0.7);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .drain-1 { top: 10%; left: 10%; }
+        .drain-2 { top: 10%; right: 10%; }
+        .drain-3 { bottom: 10%; left: 10%; }
+        .drain-4 { bottom: 10%; right: 10%; }
+
+        /* End labels */
+        .end-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.5);
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+
+        .pavilion-end {
+            top: 45px;
+        }
+
+        .high-court-end {
+            bottom: 45px;
+        }
+
+        /* Boundary distance markers */
+        .distance-marker {
+            position: absolute;
+            color: rgba(255,255,255,0.7);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .distance-left { left: 30px; top: 50%; transform: translateY(-50%); }
+        .distance-right { right: 30px; top: 50%; transform: translateY(-50%); }
+        .distance-top { top: 35px; left: 50%; transform: translateX(-50%); }
+        .distance-bottom { bottom: 35px; left: 50%; transform: translateX(-50%); }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 11px;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .legend-wet {
+            background: rgba(20, 60, 20, 0.9);
+            border: 1px solid #0a3d0a;
+        }
+
+        .legend-drain {
+            border: 2px dashed rgba(100, 149, 237, 0.8);
+            background: transparent;
+        }
+
+        .legend-cover {
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(100, 149, 237, 0.5),
+                rgba(100, 149, 237, 0.5) 3px,
+                rgba(70, 130, 180, 0.5) 3px,
+                rgba(70, 130, 180, 0.5) 6px
+            );
+        }
+
+        /* Match info panel */
+        .match-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        .match-info h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .match-info p {
+            margin: 5px 0;
+            color: #aaa;
+        }
+
+        .match-info span {
+            color: #00d4ff;
+        }
+
+        /* Mist overlay */
+        .mist {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center,
+                transparent 30%,
+                rgba(150, 180, 200, 0.15) 100%);
+            pointer-events: none;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="match-header">
+        <div class="venue-name">Eden Gardens</div>
+        <div class="match-title">INDIA vs PAKISTAN - T20 INTERNATIONAL</div>
+        <div class="weather-indicator">
+            <span class="weather-icon">🌧️</span>
+            <span>Rainy Conditions | Visibility: Reduced | Outfield: Wet</span>
+        </div>
+    </div>
+
+    <div class="ground-container">
+        <!-- Rain effect -->
+        <div class="rain" id="rain"></div>
+
+        <!-- Ground oval -->
+        <div class="ground">
+            <!-- Water shimmer effect -->
+            <div class="water-shimmer"></div>
+
+            <!-- Wet patches -->
+            <div class="wet-patch wet-patch-1"></div>
+            <div class="wet-patch wet-patch-2"></div>
+            <div class="wet-patch wet-patch-3"></div>
+            <div class="wet-patch wet-patch-4"></div>
+
+            <!-- Drainage areas -->
+            <div class="drainage-area drain-1"></div>
+            <div class="drainage-area drain-2"></div>
+            <div class="drainage-area drain-3"></div>
+            <div class="drainage-area drain-4"></div>
+
+            <!-- Boundary rope -->
+            <div class="boundary"></div>
+
+            <!-- 30-yard circle -->
+            <div class="inner-circle thirty-yard"></div>
+
+            <!-- Sight screens -->
+            <div class="sight-screen sight-screen-top">SIGHT SCREEN</div>
+            <div class="sight-screen sight-screen-bottom">SIGHT SCREEN</div>
+
+            <!-- End labels -->
+            <div class="end-label pavilion-end">PAVILION END</div>
+            <div class="end-label high-court-end">HIGH COURT END</div>
+
+            <!-- Boundary distances -->
+            <div class="distance-marker distance-left">68m</div>
+            <div class="distance-marker distance-right">65m</div>
+            <div class="distance-marker distance-top">64m</div>
+            <div class="distance-marker distance-bottom">66m</div>
+
+            <!-- Pitch with cover -->
+            <div class="pitch-container">
+                <div class="pitch">
+                    <div class="crease crease-top"></div>
+                    <div class="crease crease-bottom"></div>
+                    <div class="stumps stumps-top">
+                        <div class="stump"></div>
+                        <div class="stump"></div>
+                        <div class="stump"></div>
+                    </div>
+                    <div class="stumps stumps-bottom">
+                        <div class="stump"></div>
+                        <div class="stump"></div>
+                        <div class="stump"></div>
+                    </div>
+                </div>
+                <div class="pitch-cover">
+                    <span class="cover-label">PITCH COVERED</span>
+                </div>
+            </div>
+
+            <!-- Mist overlay -->
+            <div class="mist"></div>
+        </div>
+
+        <!-- Match info panel -->
+        <div class="match-info">
+            <h4>Ground Conditions</h4>
+            <p>Outfield: <span>Wet/Slow</span></p>
+            <p>Drainage: <span>Active</span></p>
+            <p>Pitch Status: <span>Covered</span></p>
+            <p>Boundary: <span>64-68m</span></p>
+            <p>Capacity: <span>66,000</span></p>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color legend-wet"></div>
+                <span>Wet Patches</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-drain"></div>
+                <span>Drainage Points</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-cover"></div>
+                <span>Pitch Cover</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create rain drops
+        function createRain() {
+            const rainContainer = document.getElementById('rain');
+            const numberOfDrops = 100;
+
+            for (let i = 0; i < numberOfDrops; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'rain-drop';
+                drop.style.left = Math.random() * 100 + '%';
+                drop.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                drop.style.opacity = Math.random() * 0.5 + 0.3;
+                rainContainer.appendChild(drop);
+            }
+        }
+
+        createRain();
+    </script>
+</body>
+</html>

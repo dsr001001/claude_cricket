@@ -1,0 +1,186 @@
+=============================================================================
+                    EDEN GARDENS GROUND DOCUMENTATION
+                    India vs Pakistan T20I - Rainy Day Conditions
+=============================================================================
+
+GROUND OVERVIEW
+===============
+
+Venue Name: Eden Gardens
+Location: Kolkata, West Bengal, India
+Established: 1864
+Capacity: 66,000 (post-renovation)
+Nickname: "The Mecca of Indian Cricket"
+
+PHYSICAL SPECIFICATIONS
+=======================
+
+1. PLAYING AREA DIMENSIONS
+   - Overall Shape: Oval
+   - Length (North-South): Approximately 150 meters
+   - Width (East-West): Approximately 140 meters
+   - Playing Surface Area: ~16,000 square meters
+
+2. BOUNDARY MEASUREMENTS
+   - Pavilion End (North): 64 meters
+   - High Court End (South): 66 meters
+   - Square Boundaries (East): 65 meters
+   - Square Boundaries (West): 68 meters
+   - Note: Boundaries are slightly irregular due to stadium shape
+
+3. PITCH SPECIFICATIONS
+   - Length: 22 yards (20.12 meters)
+   - Width: 10 feet (3.05 meters)
+   - Material: Red clay and black soil mixture
+   - Grass Coverage: Light grass on typical Kolkata pitches
+
+RAINY DAY GROUND CONDITIONS
+===========================
+
+CURRENT WEATHER IMPACT:
+
+1. OUTFIELD CONDITIONS
+   Status: WET/SLOW
+
+   Assessment:
+   - Grass is saturated with moisture
+   - Ball will not travel as quickly to boundary
+   - Fielders may slip during diving attempts
+   - Extra caution required for quick singles
+
+   Wet Patch Locations (Identified):
+   - Area 1: 15% from North, 20% from West (approx 80x60m patch)
+   - Area 2: 60% from North, 85% from West (approx 100x70m patch)
+   - Area 3: 80% from North, 25% from West (approx 70x50m patch)
+   - Area 4: 30% from North, 75% from West (approx 60x45m patch)
+
+   Ground Staff Actions:
+   - Super sopper deployed between innings
+   - Sand/sawdust applied to high-moisture areas
+   - Continuous monitoring of water accumulation points
+
+2. DRAINAGE SYSTEM
+   Status: FULLY OPERATIONAL
+
+   Eden Gardens Drainage Specifications:
+   - Primary System: Sub-surface drainage network
+   - Secondary System: Perimeter channel drains
+   - Drainage Points: 4 major collection areas at ground corners
+   - Drainage Rate: Approximately 25mm per hour capacity
+   - Current Performance: Operating at 80% capacity
+
+   Drainage Point Locations:
+   - D1: Northeast corner (10% from edge)
+   - D2: Northwest corner (10% from edge)
+   - D3: Southeast corner (10% from edge)
+   - D4: Southwest corner (10% from edge)
+
+3. VISIBILITY CONDITIONS
+   Status: REDUCED
+
+   Factors Affecting Visibility:
+   - Light drizzle creating mist effect
+   - Overcast sky reducing natural light
+   - Floodlights: ALL operational and at maximum output
+   - Estimated visibility range: 80-90% of normal
+
+   Recommendations:
+   - White ball visibility may be affected
+   - Sight screens verified as clean and properly positioned
+   - Additional lighting checks completed
+
+PITCH PROTECTION STATUS
+=======================
+
+Current Status: PITCH FULLY COVERED
+
+Cover Details:
+- Type: Mobile hover covers
+- Coverage: Extends 2 meters beyond pitch on all sides
+- Material: Waterproof PVC sheeting
+- Anchor Points: Secured at 8 points around pitch
+
+Cover Deployment Timeline:
+- Covers placed: 2 hours before scheduled start
+- Last inspection: 30 minutes ago
+- Estimated uncovering: 45 minutes before play (if rain stops)
+
+SIGHT SCREEN POSITIONS
+======================
+
+Pavilion End (North):
+- Position: Directly behind bowler's arm
+- Size: 25m wide x 8m high
+- Color: White
+- Status: Clean, properly aligned
+
+High Court End (South):
+- Position: Directly behind bowler's arm
+- Size: 25m wide x 8m high
+- Color: White
+- Status: Clean, properly aligned
+
+GROUND PREPARATION NOTES FOR T20 FORMAT
+=======================================
+
+1. Boundary Rope:
+   - Standard T20 boundary positioning applied
+   - Rope is wet but securely pegged
+   - Boundary markers clearly visible
+
+2. Circle Marking (30-yard):
+   - Powerplay circle clearly marked
+   - White paint renewed before match
+   - Visible despite wet conditions
+
+3. Crease Markings:
+   - Protected under covers
+   - Will be re-marked before play if necessary
+   - White paint stocks available
+
+INDIA vs PAKISTAN SPECIFIC PREPARATIONS
+========================================
+
+Security Measures:
+- Ground perimeter: Fully secured
+- Player access routes: Designated and monitored
+- Crowd control barriers: In place around boundary
+
+Broadcast Requirements:
+- Camera positions: 22 cameras confirmed
+- Spider cam: Operational
+- Stump cameras: Waterproof units installed
+
+Ground Staff Deployment:
+- On-field staff: 30 personnel on standby
+- Cover team: 15 personnel ready
+- Equipment operators: 5 super sopper operators
+
+MATCH READINESS ASSESSMENT
+==========================
+
+Overall Ground Readiness: 85%
+
+Issues Requiring Attention:
+1. Outfield moisture levels need monitoring
+2. Drainage may need manual assistance if rain intensifies
+3. Pitch cover seams to be checked for leakage
+
+Estimated Time to Match Ready:
+- If rain stops now: 45-60 minutes
+- Continuous light rain: Match can proceed with delays
+- Heavy rain: DLS method likely to be applied
+
+Ground Curator Notes:
+"Eden Gardens drainage has been upgraded significantly. We are confident
+the ground can handle moderate rainfall. The outfield will be slower than
+usual, but playable. Boundary hitting will require more power due to wet
+conditions. We recommend both teams adjust their fielding positions to
+account for reduced mobility on the wet grass."
+
+- Signed: Ground Management Team
+- Date: 2026-01-06
+
+=============================================================================
+                    END OF GROUND DOCUMENTATION
+=============================================================================
